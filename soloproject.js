@@ -1,3 +1,9 @@
+// Solo Project from Module 3.2 of Scrimba.com's JavaScript course
+// https://scrimba.com/ 
+
+
+// project instructions: 
+
 // save number to a variable in code
 
 // when app loads, do calulations and 
@@ -8,81 +14,75 @@
 // check out this css gradient generator
 // https://www.joshwcomeau.com/gradient-generator/
 
-// add input for the user to change the number 
-// and automatically recalculate values 
-// when it changes
+// extra: add input for the user to change the number 
+// and automatically recalculate values when it changes
 
+//
+let lengthResults = document.getElementById("length-results")
+let volumeResults = document.getElementById("volume-results")
+let massResults = document.getElementById("mass-results")
 
-
-
+// starting number
 let numbVar = 10
 
+// returning the value to the numbers id
 document.getElementById("number").innerText = numbVar
 
+// conversion formulas
+let metersToFeet = 3.2808399
+let feetToMeters = 0.3048
+let litersToGallons = 3.785411784
+let gallonsToLiters = 0.264172
+let poundsToKilos = 0.45359237
+let kilosToPounds = 2.20462262
+
+// calculating length conversions
+lengthResults.textContent =
+    `
+  ${numbVar} meters = ${(numbVar*metersToFeet).toFixed(3)} feet 
+| ${numbVar} feet = ${(numbVar*feetToMeters).toFixed(3)} meters
+ `
+    // calculating volume conversions
+volumeResults.textContent =
+    `
+    ${numbVar} liters = ${(numbVar*litersToGallons).toFixed(3)} gallon 
+    | ${numbVar} gallons = ${(numbVar*gallonsToLiters).toFixed(3)} liters
+    `
+    // calculating mass conversions
+massResults.textContent =
+    `
+    ${numbVar} kilos = ${(numbVar*poundsToKilos).toFixed(3)} pounds
+    | ${numbVar} pounds = ${(numbVar*kilosToPounds).toFixed(3)} kilos
+    `
+
+// if user inputs own value
 function getInputValue() {
-    // Selecting the input element and get its value 
+    // selecting the input element and get its value 
     let inputVal = document.getElementById("myInput").value;
 
-    // Displaying the value
-    console.log(inputVal);
+    // displaying the value
+    // console.log(inputVal); // this was only here for testing purposes
     numbVar = inputVal
 
-    document.getElementById("length-results").textContent =
+    // calculating length conversions
+    lengthResults.textContent =
         `
-    ${numbVar} meters = ${(numbVar*3.2808).toFixed(3)} feet 
-    | ${numbVar} feet = ${(numbVar*0.3049).toFixed(3)} meters
+    ${numbVar} meters = ${(numbVar*metersToFeet).toFixed(3)} feet 
+    | ${numbVar} feet = ${(numbVar*feetToMeters).toFixed(3)} meters
     `
-
-    document.getElementById("volume-results").textContent =
+        // calculating volume conversions
+    volumeResults.textContent =
         `
-    ${numbVar} liters = ${(numbVar*3.7854).toFixed(3)} gallon 
-    | ${numbVar} gallons = ${(numbVar*0.2642).toFixed(3)} liters
+    ${numbVar} liters = ${(numbVar*litersToGallons).toFixed(3)} gallon 
+    | ${numbVar} gallons = ${(numbVar*gallonsToLiters).toFixed(3)} liters
     `
-    document.getElementById("mass-results").textContent =
+        // calculating mass conversions
+    massResults.textContent =
         `
-    ${numbVar} kilos = ${(numbVar*2.2046).toFixed(3)} pounds
-    | ${numbVar} pounds = ${(numbVar*0.4536).toFixed(3)} kilos
+    ${numbVar} kilos = ${(numbVar*kilosToPounds).toFixed(3)} pounds
+    | ${numbVar} pounds = ${(numbVar*poundsToKilos).toFixed(3)} kilos
     `
-
+        // returning the value to the numbers id
     document.getElementById("number").innerText = numbVar
 
 }
-
-
-// length Meters
-//0.3049
-
-// length Feet
-//3.2808
-
-document.getElementById("length-results").textContent =
-    `
-    ${numbVar} meters = ${(numbVar*3.2808).toFixed(3)} feet 
-    | ${numbVar} feet = ${(numbVar*0.3049).toFixed(3)} meters
-    `
-
-
-// volume Liters
-// 3.7854
-
-// volume Gallons
-// *    0.2642
-
-document.getElementById("volume-results").textContent =
-    `
-    ${numbVar} liters = ${(numbVar*3.7854).toFixed(3)} gallon 
-    | ${numbVar} gallons = ${(numbVar*0.2642).toFixed(3)} liters
-    `
-
-
-// mass Kilograms
-// *    0.4536
-
-// mass Pounds
-// *    2.2046
-
-document.getElementById("mass-results").textContent =
-    `
-    ${numbVar} kilos = ${(numbVar*2.2046).toFixed(3)} pounds
-    | ${numbVar} pounds = ${(numbVar*0.4536).toFixed(3)} kilos
-    `

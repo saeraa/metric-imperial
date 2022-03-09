@@ -1,3 +1,7 @@
+/* solo project for scrimba.com's javascript course
+    most css from https://www.figma.com/file/AdqUVRQCZGP1zRcEvzmJTm/Unit-Conversion
+*/
+
 .main {
     position: relative;
     width: 550px;
@@ -93,7 +97,7 @@ input::placeholder {
     position: relative;
     width: 550px;
     height: 550px;
-    top: 50px;
+    top: 0px;
     margin: auto;
     background: #1F2937;
 }
