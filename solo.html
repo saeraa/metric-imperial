@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metric/Imperial unit conversion / JS Solo Project</title>
+    <link rel="stylesheet" href="solo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="dark_active">
+        <div class="main">
+            <p class="heading">Metric/Imperial unit conversion</p>
+            <p id="number">42</p>
+        </div>
+
+
+        <div class="inputNumber">
+            <input type="number" placeholder="Pick a number" id="myInput" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="3">
+            <button type="button" onclick="getInputValue();">Try it</button>
+        </div>
+
+
+        <div class="results">
+
+
+
+            <p id="length">Length (Meter/Feet)</p>
+
+            <p id="length-results"> </p>
+
+            <p id="volume">Volume (Liters/Gallons)</p>
+
+            <p id="volume-results"> </p>
+
+            <p id="mass">Mass (Kilograms/Pounds)</p>
+
+            <p id="mass-results"> </p>
+
+            <!--
+
+
+            <p id="length">Length (Meter/Feet)</p>
+            <p id="length-results">
+                20 meters =
+                <span id="feet">65.616</span> feet | 20 feet =
+                <span id="meters">6.096</span> meters</p>
+
+            <p id="volume">Volume (Liters/Gallons)
+            </p>
+            <p id="volume-results">
+                20 liters = 
+                <span id="gallons">5.284</span> gallons | 20 gallons = 75.708 liters </p>
+
+            <p id="mass">Mass (Kilograms/Pounds)</p>
+            <p id="mass-results">
+                20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos</p>
+-->
+        </div>
+    </div>
+    <script src="soloproject.js"></script>
+</body>
+
+</html>
